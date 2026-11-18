@@ -6,4 +6,4 @@ Desenvolvido por [Danilo Alves](https://github.com/alvesribeirodan) e [Thaís Ro
 1. Introdução
 2. Modelo Entidade-Relacionamento
 3. Modelo Relacional
-4. [Codigo SQL](codigo_SQL.md)
+4. [Codigo SQL](codigo_SQL)
