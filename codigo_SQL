@@ -1,2 +1,13 @@
-create database zoo;
-use zoo;
+CREATE DATABASE zoo;
+USE zoo;
+
+CREATE TABLE animal (
+    id_pet INT PRIMARY KEY AUTO_INCREMENT,
+    nome_cientifico VARCHAR (60) NOT NULL, --para servir de fk e ligar com a tabela especie
+    data_nasc DATE NOT NULL,
+    nome_animal VARCHAR (60) NOT NULL,
+    status_vida ENUM ('vivo', 'morto') NOT NULL,
+    peso FLOAT NOT NULL,
+    altura FLOAT NOT NULL,
+    pais_origem VARCHAR (30) NOT NULL
+)
