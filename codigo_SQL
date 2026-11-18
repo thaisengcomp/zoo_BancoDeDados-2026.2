@@ -10,4 +10,4 @@ CREATE TABLE animal (
     peso FLOAT NOT NULL,
     altura FLOAT NOT NULL,
     pais_origem VARCHAR (30) NOT NULL
-)
+);
