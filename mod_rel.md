@@ -74,4 +74,4 @@ Pela regra, deve-se criar uma nova tabela com as chaves de Alimentação e Anima
 
 Por ser multivalorado, cria-se nova tabela com a chave sendo o número de telefone e PK de funcionário como FK.
 
-<img src="/>
+<img src="imagens/zoo_relacional.png"/>
