@@ -20,4 +20,4 @@ Um **INGRESSO** possui um código único de 15 dígitos, tipo de ingresso, data 
 
 <img src="IMG_20261118_180622_007.jpg"/>
 DER desenvolvido a partir das regras de negócio.
-Ferramenta utilizada: site (ERDPlus)[https://erdplus.com].
+Ferramenta utilizada: site [ERDPlus](https://erdplus.com).
