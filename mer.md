@@ -1,4 +1,4 @@
-# 1. Modelo Entidade-Relacionamento
+# 2. Modelo Entidade-Relacionamento
 
 Para esse modelo, utilizamos as seguintes regras de negócio:
 
