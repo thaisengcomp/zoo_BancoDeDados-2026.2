@@ -5,5 +5,5 @@ Desenvolvido por [Danilo Alves](https://github.com/alvesribeirodan) e [Thaís Ro
 
 1. Introdução
 2. [Modelo Entidade-Relacionamento](mer.md)
-3. Modelo Relacional
+3. [Modelo Relacional](mod_rel.md)
 4. [Codigo SQL](codigo_SQL)
