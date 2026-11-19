@@ -18,4 +18,6 @@ Um **FUNCIONÁRIO** é identificado pelo seu CPF e possui cargo, nome, sexo, dat
 
 Um **INGRESSO** possui um código único de 15 dígitos, tipo de ingresso, data e hora da compra e forma de pagamento. Um **VISITANTE** possui CPF, nome e data de nascimento. Um visitante pode comprar um ou vários ingressos e um ingresso pode ser comprado por um único visitante. Um ingresso é vendido por exatamente um funcionário e um funcionário pode vender nenhum ou vários ingressos.
 
-<img src="main/IMG_20261118_180622_007.jpg" alt="DER desenvolvido a partir da regras de negócio." width="400" />
+<img src="IMG_20261118_180622_007.jpg"/>
+DER desenvolvido a partir das regras de negócio.
+Ferramenta utilizada: site [ERDPlus](https://erdplus.com).
