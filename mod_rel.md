@@ -34,7 +34,7 @@ Sendo entidade fraca e pela regra de modelos relacionais, a PK de Viveiro deve i
 
 **_N:N (muitos funcionários para muitas manutenções)_**
 
-Deve-se criar uma tabela nova com as PKs de Manutenção e de Funcionáro.
+Deve-se criar uma tabela nova com as PKs de Manutenção e de Funcionário.
 
 
 ### Especialização Veterinário da tabela Funcionário:
@@ -72,6 +72,6 @@ Pela regra, deve-se criar uma nova tabela com as chaves de Alimentação e Anima
 
 ### Atributo **Telefone** da tabela *Funcionario*:
 
-Por ser multivalorado, cria-se nova tabela com a chave sendo o número de telefone e PK de funcionário como FK.
+Por ser multivalorado, cria-se nova tabela com chave composta, sendo o número de telefone e a FK vinda da tabela Funcionário.
 
 <img src="imagens/zoo_relacional.png"/>
