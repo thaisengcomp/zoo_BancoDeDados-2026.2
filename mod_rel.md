@@ -39,7 +39,7 @@ Deve-se criar uma tabela nova com as PKs de Manutenção e de Funcionário.
 
 ### Especialização Veterinário da tabela Funcionário:
 
-Veterinário herda os atributos de Funcionário.
+Veterinário herda a PK de Funcionário.
 
 
 ### Relacionamento **ATENDE** *(Veterinário-Animal)*:
