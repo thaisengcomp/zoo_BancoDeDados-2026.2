@@ -11,3 +11,141 @@ CREATE TABLE animal (
     altura FLOAT NOT NULL,
     pais_origem VARCHAR (30) NOT NULL
 );
+
+-----------------------------------------------------------------------------------
+create database zoo;
+use zoo;
+
+create table especie
+	(nome_cientifico varchar(60) primary key not null,
+    nome_popular varchar(60) not null,
+    reino varchar(15),
+    tipo_alimentacao enum('herbivoro', 'carnivoro', 'onivoro') not null
+    );
+
+create table viveiro
+	(cod_viveiro int auto_increment primary key not null,
+    tipo_viveiro enum('naturalista', 'fechado', 'aquatico') not null
+    );
+    
+create table animal
+	(id_pet char(6) primary key not null,
+    nome_animal varchar(60) not null,
+    altura_cm int,
+    peso_kg float,
+    data_nasc datetime,
+    pais_origem varchar(60),
+    status_vida enum ('vivo', 'morto') not null,
+    sexo char(2) not null,
+    id_especie varchar(60),
+    id_viveiro int,
+    
+    foreign key (id_especie) references especie(nome_cientifico),
+    foreign key (id_viveiro) references viveiro(cod_viveiro)
+    );
+    
+create table departamento
+	(cod_dep int auto_increment primary key not null,
+    nome varchar(15) not null
+    );
+
+create table alimentacao
+	(nome_alimento varchar(50) primary key not null,
+    fornecedor varchar(60) not null,
+    tipo_alimento enum('planta', 'grao', 'carne', 'viva') not null
+    );
+    
+create table visitante
+	(cpf_v char(11) primary key not null,
+    nome varchar(60) not null,
+    data_nasc datetime not null
+    );
+
+-- problema de chave primaria bem aqui
+create table manutencao
+	(cod_manutencao int auto_increment not null,
+    data_hora_manutencao datetime not null,
+    tipo_manutencao enum('limpeza', 'conserto') not null,
+    id_viveiro int,
+    
+    foreign key (id_viveiro) references viveiro(cod_viveiro),
+    primary key (id_viveiro, cod_manutencao, data_hora_manutencao)
+    );
+    
+create table funcionario
+	(cpf_f char(11) primary key not null,
+    cargo varchar(50) not null,
+    nome varchar(60) not null,
+    data_nasc datetime not null,
+    cidade varchar(25) not null,
+	bairro varchar(25) not null,
+	estado char(2) not null,
+	numero_casa varchar(40) not null,
+	email varchar(70) not null,
+	data_contratação datetime not null,
+    salario_atual float,
+    id_dep int,
+    
+    foreign key (id_dep) references departamento(cod_dep)
+	);
+
+create table ingresso
+	(cod_ingresso char(15) primary key not null,
+    data_hora datetime not null,
+    tipo_ingresso enum('inteira', 'meia', 'gratuita') not null,
+    forma_pagamento enum('pix', 'dinheiro', 'credito', 'debito') not null,
+    id_visitante char(11),
+    id_funcionario char(11),
+    
+    foreign key (id_visitante) references visitante(cpf_v),
+    foreign key (id_funcionario) references funcionario(cpf_f)
+    );
+
+create table veterinario
+	(rqe char(7) not null,
+    ano_formacao char(4) not null,
+    id_func char(11),
+    
+    foreign key (id_func) references funcionario(cpf_f)
+		on delete cascade,
+	primary key (id_func)
+    );
+
+create table telefone_func
+	(num_telefone char(11) primary key not null,
+    id_func char(13),
+    
+    foreign key (id_func) references funcionario(cpf_f),
+    primary key (id_func)
+    );
+
+create table faz
+	(id_func char(13),
+    id_cod_manutencao int,
+    id_data_hora_manutencao datetime,
+    id_viveiro int,
+    
+    foreign key (id_func) references funcionario(cpf_f),
+    foreign key (id_viveiro) references viveiro(cod_viveiro),
+    foreign key (id_cod_manutencao) references manutencao(cod_manutencao),
+    foreign key (id_data_hora_manutencao) references manutencao(data_hora_manutencao),
+    primary key (id_func, id_viveiro, id_cod_manutencao, id_data_hora_manutencao)
+    );
+
+create table come
+	(id_alimentacao varchar(50),
+    id_pet char(6),
+    
+    foreign key (id_alimentacao) references alimentacao(nome_alimento),
+    foreign key (id_pet) references animal(id_pet),
+    primary key (id_alimentacao, id_pet)
+    );
+
+create table atende
+	(id_func char(11),
+    id_pet char(6),
+    
+    foreign key (id_func) references funcionario(cpf_f),
+    foreign key (id_pet) references animal(id_pet),
+	primary key (id_func, id_pet)
+    );
