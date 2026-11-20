@@ -4,7 +4,7 @@ Para esse modelo, utilizamos as seguintes regras de negócio:
 
 Um **ANIMAL** possui um número de identidade própria, nome, peso (em kg), altura (em cm), status (vivo ou morto), país de origem, sexo, data de nascimento e idade. Cada animal tem uma única **ESPÉCIE**, que é identificada pelo nome científico, e também possui nome popular, reino e tipo de alimentação. Uma espécie pode ter nenhum ou vários animais, mas um animal tem uma única espécie.
 
-A **ALIMENTAÇÃO** de um animal é identificada pelo nome do alimento, com as informações de tipo de alimento (planta, grão ou carne) e o fornecedor. Só há um único fornecedor para cada tipo de alimento e a única informação necessária é o nome do fornecedor. Uma alimentação pode ser de nenhum ou vários animais e um animal pode ter um ou vários tipos de alimentação.
+A **ALIMENTAÇÃO** de um animal é identificada pelo nome do alimento, com as informações de tipo de alimento (planta, grão, carne ou viva) e o fornecedor. Só há um único fornecedor para cada nome de alimento e a única informação necessária é o nome do fornecedor. Uma alimentação pode ser de nenhum ou vários animais e um animal pode ter um ou vários tipos de alimentação.
 
 Um **VIVEIRO** é identificado por um código único e possui também um nome (tipo do viveiro: naturalista, fechado, aquático). Em um viveiro podem viver nenhum ou vários animais e um animal só vive em um único viveiro.
 
