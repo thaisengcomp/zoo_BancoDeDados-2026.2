@@ -31,7 +31,7 @@ create table animal
     
 create table departamento
 	(cod_dep int auto_increment primary key not null,
-    nome varchar(15) not null
+    nome varchar(20) not null
     );
 
 create table alimentacao
