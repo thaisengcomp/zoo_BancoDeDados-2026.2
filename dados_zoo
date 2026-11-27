@@ -1,0 +1,99 @@
+insert into especie (nome_cientifico, nome_popular, reino, tipo_alimentacao) values
+('Pygoscelis adeliae', 'Pinguim-de-adélia', 'Animalia', 'carnivoro'),
+('Lontra canadensis', 'Lontra-do-canadá', 'Animalia', 'carnivoro'),
+('Equus quagga', 'Zebra-das-planícies', 'Animalia', 'herbivoro'),
+('Giraffa camelopardalis', 'Girafa', 'Animalia', 'herbivoro'),
+('Hippopotamus amphibius', 'Hipopótamo', 'Animalia', 'herbivoro'),
+('Panthera leo', 'Leao', 'Animalia', 'carnivoro'),
+('Lemur catta', 'Lemure-de-cauda-anelada', 'Animalia', 'onivoro'),
+('Daubentonia madagascariensis', 'Aie-aie (Lemure)', 'Animalia', 'onivoro'),
+('Microcebus murinus', 'Lemure-rato-cinzento', 'Animalia', 'onivoro'),
+('Ailuropoda melanoleuca', 'Panda-gigante', 'Animalia', 'herbivoro'),
+('Panthera tigris', 'Tigre', 'Animalia', 'carnivoro'),
+('Tenodera sinensis', 'Louva-a-deus-chines', 'Animalia', 'carnivoro'),
+('Rhinopithecus roxellana', 'Macaco-dourado', 'Animalia', 'onivoro'),
+('Grus japonensis', 'Grou-de-coroa-vermelha', 'Animalia', 'carnivoro'),
+('Trimeresurus stejnegeri', 'Víbora-verde-chinesa', 'Animalia', 'carnivoro'),
+('Ailurus fulgens', 'Panda-vermelho', 'Animalia', 'herbivoro'),
+('Chelonoidis niger', 'Tartaruga-gigante-de-galápagos', 'Animalia', 'herbivoro');
+
+insert into viveiro(tipo_viveiro) values
+('fechado'), ('aquatico'), ('aquatico'), ('naturalista'), 
+('naturalista'), ('aquatico'), ('naturalista'), ('naturalista'), 
+('naturalista'), ('naturalista'), ('fechado'), ('naturalista'),
+('aquatico'), ('fechado'), ('naturalista'), ('naturalista');
+
+insert into animal (id_pet, nome_animal, altura_cm, peso_kg, data_nasc, pais_origem, status_vida, sexo, id_especie, id_viveiro) values
+('AN0001', 'Recruta',    55,    4.2, '2022-03-10', 'Antartida',      'vivo', 'M', 'Pygoscelis adeliae', 1),
+('AN0002', 'Rico',       65,    5.0, '2019-08-22', 'Antartida',      'vivo', 'M', 'Pygoscelis adeliae', 1),
+('AN0003', 'Capitão',    70,    5.5, '2017-05-14', 'Antartida',      'vivo', 'M', 'Pygoscelis adeliae', 1),
+('AN0004', 'Kowalski',   68,    5.1, '2018-11-02', 'Antartida',      'vivo', 'M', 'Pygoscelis adeliae', 1),
+('AN0005', 'Marlene',    80,    9.0, '2020-06-18', 'Estados Unidos', 'vivo', 'F', 'Lontra canadensis', 2),
+('AN0006', 'Martin',     130,   350, '2016-04-03', 'Estados Unidos', 'vivo', 'M', 'Equus quagga', 4),
+('AN0007', 'Melman',     500,   900, '2015-09-12', 'Estados Unidos', 'vivo', 'M', 'Giraffa camelopardalis', 5),
+('AN0008', 'Gloria',     150,  1500, '2014-12-01', 'Estados Unidos', 'vivo', 'F', 'Hippopotamus amphibius', 6),
+('AN0009', 'Alex',       120,   190, '2015-07-26', 'Quenia',         'vivo', 'M', 'Panthera leo', 7),
+('AN0010', 'Rei Julien', 40,    2.2, '2018-02-09', 'Madagascar',     'vivo', 'M', 'Lemur catta', 8),
+('AN0011', 'Maurice',    40,    2.6, '2013-10-30', 'Madagascar',     'vivo', 'M', 'Daubentonia madagascariensis', 8),
+('AN0012', 'Mort',       13,   0.06, '2021-01-15', 'Madagascar',     'vivo', 'M', 'Microcebus murinus', 8),
+('AN0013', 'Po',          170, 120.0,  '2016-03-21', 'China', 'vivo', 'M', 'Ailuropoda melanoleuca', 9),
+('AN0014', 'Tigresa',     120,  130.0, '2017-07-08', 'China', 'vivo', 'F', 'Panthera tigris', 10),
+('AN0015', 'Louva-a-Deus', 8,   0.004, '2024-05-02', 'China', 'vivo', 'M', 'Tenodera sinensis', 11),
+('AN0016', 'Macaco',       75,   18.0, '2018-09-17', 'China', 'vivo', 'M', 'Rhinopithecus roxellana', 12),
+('AN0017', 'Garça',       150,   10.0, '2015-11-29', 'China', 'vivo', 'M', 'Grus japonensis', 13),
+('AN0018', 'Víbora',       80,   0.5,  '2020-04-13', 'China', 'vivo', 'F', 'Trimeresurus stejnegeri', 14),
+('AN0019', 'Shifu',        60,   5.0,  '2000-01-25', 'China', 'vivo', 'M', 'Ailurus fulgens', 15),
+('AN0020', 'Oogway',      100,  250.0, '1890-06-01', 'China', 'vivo', 'M', 'Chelonoidis niger', 16);
+
+insert into departamento (nome) values
+('Veterinaria'),
+('Manutencao'),
+('Bilheteria'),
+('Administracao'),
+('Recursos Humanos'),
+('Comunicacao');
+
+insert into alimentacao (nome_alimento, fornecedor, tipo_alimento) values
+('Peixe fresco',      'Peixaria Nemo',			'carne'),
+('Sardinha',          'Peixaria Nemo',			'carne'),
+('Carne bovina',      'Friboi',					'carne'),
+('Frango',            'Copacol',				'carne'),
+('Camarao',           'Peixaria Nemo',			'carne'),
+('Capim',             'Fazenda Dwight Schrute', 'planta'),
+('Feno',              'Fazenda Dwight Schrute', 'planta'),
+('Folhas de acacia',  'Naturefolhas',			'planta'),
+('Bambu',             'Bambuzal UnB',			'planta'),
+('Frutas variadas',   'Naturefolhas',			'planta'),
+('Hortalicas',        'Naturefolhas',			'planta'),
+('Milho',             'Graos do Sul',			'grao'),
+('Aveia',             'Graos do Sul',			'grao'),
+('Sementes variadas', 'Graos do Sul',			'grao'),
+('Grilos',            'Inseto Vivo',			'viva'),
+('Ratos',             'Inseto Vivo',			'viva');
+
+insert into visitante (cpf_v, nome, data_nasc) values
+('20000000001', 'Ana Beatriz Costa',  '1992-02-17'),
+('20000000002', 'Pedro Henrique Lima','1987-10-05'),
+('20000000003', 'Júlia Martins',      '2015-06-21'),
+('20000000004', 'Roberto Nogueira',   '1965-12-30'),
+('20000000005', 'Camila Teixeira',    '2003-08-11'),
+('20000000006', 'Thiago Barbosa',     '2010-04-09'),
+('20000000007', 'Fábio Andrade',	  '1990-05-23'),
+('20000000008', 'Larissa Gomes',	  '2012-09-14'),
+('20000000009', 'Sérgio Pinto',		  '1978-03-07'),
+('20000000010', 'Natália Rocha', 	  '1996-11-28');
+
+insert into manutencao (cod_manutencao, data_hora_manutencao, tipo_manutencao, id_viveiro) values
+(1, '2026-11-01 08:00:00', 'limpeza',  1),
+(1, '2026-11-01 09:30:00', 'limpeza',  2),
+(2, '2026-11-02 10:00:00', 'conserto', 3),
+(1, '2026-11-03 08:00:00', 'limpeza',  4),
+(2, '2026-11-04 14:00:00', 'conserto', 5),
+(1, '2026-11-05 08:30:00', 'limpeza',  6),
+(2, '2026-11-06 11:00:00', 'conserto', 7),
+(1, '2026-11-07 09:00:00', 'limpeza',  8),
+(2, '2026-11-08 15:30:00', 'conserto', 9),
+(1, '2026-11-09 08:00:00', 'limpeza',  10),
+(1, '2026-11-10 08:00:00', 'limpeza',  1),
+(2, '2026-11-12 13:00:00', 'conserto', 11);
+
