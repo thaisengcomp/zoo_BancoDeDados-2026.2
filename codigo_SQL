@@ -21,7 +21,7 @@ create table animal
     data_nasc date,
     pais_origem varchar(60),
     status_vida enum ('vivo', 'morto') not null,
-    sexo char(2) not null,
+    sexo char(1) not null,
     id_especie varchar(60) not null,
     id_viveiro int not null,
     
@@ -47,9 +47,9 @@ create table visitante
     );
 
 create table manutencao
-	(cod_manutencao int auto_increment not null,
+	(cod_manutencao int not null,
     data_hora_manutencao datetime not null,
-    tipo_manutencao enum('limpeza', 'conserto') not null,
+    tipo_manutencao varchar(10) not null,
     id_viveiro int,
     
     foreign key (id_viveiro) references viveiro(cod_viveiro),
@@ -65,10 +65,10 @@ create table funcionario
 	bairro varchar(25) not null,
 	estado char(2) not null,
 	numero_casa varchar(40) not null,
-	email varchar(70) not null,
+	email varchar(70) unique not null,
 	data_contratacao date not null,
     salario_atual float,
-    sexo char(2),
+    sexo char(1),
     id_dep int not null,
     
     foreign key (id_dep) references departamento(cod_dep)
