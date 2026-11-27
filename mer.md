@@ -8,9 +8,9 @@ A **ALIMENTAÇÃO** de um animal é identificada pelo nome do alimento, com as i
 
 Um **VIVEIRO** é identificado por um código único e possui também um nome (tipo do viveiro: naturalista, fechado, aquático). Em um viveiro podem viver nenhum ou vários animais e um animal só vive em um único viveiro.
 
-Uma **MANUTENÇÃO** é uma entidade fraca de chave composta identificada por um código único, a data e hora em que foi realizada e o viveiro relacionado (código do viveiro). Também deve ter o tipo de manutenção (limpeza ou conserto). Uma manutenção acontece em um único viveiro e um viveiro pode ter nenhuma ou várias manutenções.
+Uma **MANUTENÇÃO** é uma entidade fraca de chave composta identificada por um inteiro (1 - limpeza, 2 - conserto), a data e hora em que foi realizada e o viveiro relacionado (código do viveiro). Também deve ter o tipo de manutenção (limpeza ou conserto). Uma manutenção acontece em um único viveiro e um viveiro pode ter nenhuma ou várias manutenções.
 
-Um **DEPARTAMENTO** possui um código único de 3 dígitos e o nome do departamento.
+Um **DEPARTAMENTO** possui um código único e o nome do departamento.
 
 Um **VETERINÁRIO** é identificado pelo CPF herdado de funcionário e possui um código único RQE de 7 dígitos e ano de formação. Ele é uma especialização de funcionário. Um veterinário pode cuidar de um ou vários animais e um animal possui um ou vários veterinários.
 
