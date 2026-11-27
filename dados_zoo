@@ -1,3 +1,5 @@
+use zoo;
+
 insert into especie (nome_cientifico, nome_popular, reino, tipo_alimentacao) values
 ('Pygoscelis adeliae', 'Pinguim-de-adélia', 'Animalia', 'carnivoro'),
 ('Lontra canadensis', 'Lontra-do-canadá', 'Animalia', 'carnivoro'),
@@ -41,7 +43,7 @@ insert into animal (id_pet, nome_animal, altura_cm, peso_kg, data_nasc, pais_ori
 ('AN0015', 'Louva-a-Deus', 8,   0.004, '2024-05-02', 'China', 'vivo', 'M', 'Tenodera sinensis', 11),
 ('AN0016', 'Macaco',       75,   18.0, '2018-09-17', 'China', 'vivo', 'M', 'Rhinopithecus roxellana', 12),
 ('AN0017', 'Garça',       150,   10.0, '2015-11-29', 'China', 'vivo', 'M', 'Grus japonensis', 13),
-('AN0018', 'Víbora',       80,   0.5,  '2020-04-13', 'China', 'vivo', 'F', 'Trimeresurus stejnegeri', 14),
+('AN0018', 'Vibora',       80,   0.5,  '2020-04-13', 'China', 'vivo', 'F', 'Trimeresurus stejnegeri', 14),
 ('AN0019', 'Shifu',        60,   5.0,  '2000-01-25', 'China', 'vivo', 'M', 'Ailurus fulgens', 15),
 ('AN0020', 'Oogway',      100,  250.0, '1890-06-01', 'China', 'vivo', 'M', 'Chelonoidis niger', 16);
 
@@ -72,16 +74,16 @@ insert into alimentacao (nome_alimento, fornecedor, tipo_alimento) values
 ('Ratos',             'Inseto Vivo',			'viva');
 
 insert into visitante (cpf_v, nome, data_nasc) values
-('20000000001', 'Ana Beatriz Costa',  '1992-02-17'),
-('20000000002', 'Pedro Henrique Lima','1987-10-05'),
-('20000000003', 'Júlia Martins',      '2015-06-21'),
-('20000000004', 'Roberto Nogueira',   '1965-12-30'),
-('20000000005', 'Camila Teixeira',    '2003-08-11'),
-('20000000006', 'Thiago Barbosa',     '2010-04-09'),
-('20000000007', 'Fábio Andrade',	  '1990-05-23'),
-('20000000008', 'Larissa Gomes',	  '2012-09-14'),
-('20000000009', 'Sérgio Pinto',		  '1978-03-07'),
-('20000000010', 'Natália Rocha', 	  '1996-11-28');
+('20000000001', 'Sabrina Carpenter',	'1999-05-11'),
+('20000000002', 'Beyoncé',				'1981-09-04'),
+('20000000003', 'Taylor Swift',			'1989-12-13'),
+('20000000004', 'Paolla Oliveira',		'1982-04-14'),
+('20000000005', 'Olivia Rodrigo',		'2003-02-20'),
+('20000000006', 'Alcione Dias Nazareth', '1947-11-21'),
+('20000000007', 'Christina Aguilera',	'1980-12-18'),
+('20000000008', 'Marina Sena',			'1996-09-26'),
+('20000000009', 'Zara Larsson',			'1997-12-16'),
+('20000000010', 'Isabela Lopes',		'2021-12-03');
 
 insert into manutencao (cod_manutencao, data_hora_manutencao, tipo_manutencao, id_viveiro) values
 (1, '2026-11-01 08:00:00', 'limpeza',  1),
@@ -97,3 +99,115 @@ insert into manutencao (cod_manutencao, data_hora_manutencao, tipo_manutencao, i
 (1, '2026-11-10 08:00:00', 'limpeza',  1),
 (2, '2026-11-12 13:00:00', 'conserto', 11);
 
+insert into funcionario (cpf_f, cargo, nome, data_nasc, cidade, bairro, estado, numero_casa, email, data_contratacao, salario_atual, sexo, id_dep) values
+('10000000001', 'Veterinario',            'Carla Menezes',   '1985-03-12', 'Planaltina',          'Jardim Roriz',      'DF', '120', 'carla.menezes@animiguinhos.com',   '2015-02-10',  9500.00, 'F', 1),
+('10000000002', 'Veterinario',            'Rafael Duarte',   '1990-07-25', 'Sao Sebastiao',       'Bosque',            'DF', '45',  'rafael.duarte@animiguinhos.com',   '2018-06-01',  8800.00, 'M', 1),
+('10000000003', 'Veterinario',            'Helena Prado',    '1982-11-03', 'Brasilia',            'Asa Norte',         'DF', '310', 'helena.prado@animiguinhos.com',    '2012-09-15', 10200.00, 'F', 1),
+('10000000004', 'Tecnico de manutencao',  'Marcos Oliveira', '1978-05-30', 'Sobradinho',          'Mansoes Sobradinho','DF', '88',  'marcos.oliveira@animiguinhos.com', '2010-01-20',  3600.00, 'M', 2),
+('10000000005', 'Auxiliar de limpeza',    'Josefa Lima',     '1988-09-14', 'Taguatinga',          'Taguatinga Norte',  'DF', '17',  'josefa.lima@animiguinhos.com',     '2019-03-04',  2400.00, 'F', 2),
+('10000000006', 'Auxiliar de manutencao', 'Paulo Ribeiro',   '1995-01-08', 'Samambaia',           'Samambaia Sul',     'DF', '256', 'paulo.ribeiro@animiguinhos.com',   '2021-08-23',  2600.00, 'M', 5),
+('10000000007', 'Atendente',              'Beatriz Souza',   '1999-12-19', 'Valparaiso de Goias', 'Parque Esplanada',  'GO', '73',  'beatriz.souza@animiguinhos.com',   '2022-02-14',  2300.00, 'F', 3),
+('10000000008', 'Atendente',              'Lucas Ferreira',  '2001-04-02', 'Planaltina de Goias', 'Vila Buritis',      'GO', '502', 'lucas.ferreira@animiguinhos.com',  '2023-05-09',  2300.00, 'M', 3),
+('10000000009', 'Gerente',                'Fernanda Alves',  '1980-08-27', 'Aguas Claras',        'Areal',             'DF', '999', 'fernanda.alves@animiguinhos.com',  '2008-11-03',  7800.00, 'F', 4),
+('10000000010', 'Entrevistador',            'Gabriel Torres',  '1987-01-22', 'Riacho Fundo I',      'QN 7',              'DF', '64',  'gabriel.torres@animiguinhos.com',  '2016-04-18',  9100.00, 'M', 5),
+('10000000011', 'Recrutador',            'Mariana Campos',  '1993-06-09', 'Ceilandia',           'Ceilandia Norte',   'DF', '201', 'mariana.campos@animiguinhos.com',  '2020-10-05',  8700.00, 'F', 5),
+('10000000012', 'Atendente',              'Diego Santos',    '2000-10-16', 'Gama',                'Setor Leste',       'DF', '35',  'diego.santos@animiguinhos.com',    '2023-09-11',  2300.00, 'M', 3);
+
+insert into funcionario (cpf_f, cargo, nome, data_nasc, cidade, bairro, estado, numero_casa, email, data_contratacao,id_dep) values 
+('10000000013', 'Videomaker', 'Ariel Rocha', '1998-02-19', 'Planaltina', 'Vila Militar', 'DF', '05', 'ariel.rocha@animiguinhos.com', '2025-11-02', 6);
+
+insert into telefone_func (num_telefone, id_func) values
+('5561999990001', '10000000001'),
+('5561999990002', '10000000001'),
+('5561999990003', '10000000002'),
+('5561999990004', '10000000003'),
+('5561999990005', '10000000004'),
+('5561999990006', '10000000005'),
+('5561999990007', '10000000006'),
+('5561999990008', '10000000007'),
+('5561999990009', '10000000008'),
+('5561999990010', '10000000009'),
+('5561999990011', '10000000012');
+
+insert into veterinario (rqe, ano_formacao, id_func) values
+('1234567', '2009', '10000000001'),
+('2345678', '2014', '10000000002'),
+('3456789', '2006', '10000000003');
+
+insert into faz (id_func, cod_manutencao, id_viveiro, data_hora_manutencao) values
+('10000000005', 1, 1,  '2026-11-01 08:00:00'),
+('10000000005', 1, 2,  '2026-11-01 09:30:00'),
+('10000000004', 2, 3,  '2026-11-02 10:00:00'),
+('10000000006', 2, 3,  '2026-11-02 10:00:00'),
+('10000000005', 1, 4,  '2026-11-03 08:00:00'),
+('10000000004', 2, 5,  '2026-11-04 14:00:00'),
+('10000000005', 1, 6,  '2026-11-05 08:30:00'),
+('10000000006', 1, 6,  '2026-11-05 08:30:00'),
+('10000000004', 2, 7,  '2026-11-06 11:00:00'),
+('10000000005', 1, 8,  '2026-11-07 09:00:00'),
+('10000000004', 2, 9,  '2026-11-08 15:30:00'),
+('10000000006', 2, 9,  '2026-11-08 15:30:00'),
+('10000000006', 1, 10, '2026-11-09 08:00:00'),
+('10000000005', 1, 1,  '2026-11-10 08:00:00'),
+('10000000004', 2, 11, '2026-11-12 13:00:00');
+
+insert into ingresso (cod_ingresso, data_hora, tipo_ingresso, forma_pagamento, id_visitante, id_funcionario) values
+('ING000000000001', '2026-11-14 09:15:00', 'inteira',  'pix',      '20000000001', '10000000007'),
+('ING000000000002', '2026-11-14 09:40:00', 'meia',     'credito',  '20000000005', '10000000007'),
+('ING000000000003', '2026-11-14 10:05:00', 'inteira',  'debito',   '20000000002', '10000000008'),
+('ING000000000004', '2026-11-15 11:20:00', 'gratuita', 'dinheiro', '20000000006', '10000000008'),
+('ING000000000005', '2026-11-15 13:00:00', 'inteira',  'pix',      '20000000004', '10000000012'),
+('ING000000000006', '2026-11-16 09:50:00', 'inteira',  'credito',  '20000000003', '10000000012'),
+('ING000000000007', '2026-11-18 14:10:00', 'meia',     'pix',      '20000000008', '10000000007'),
+('ING000000000008', '2026-11-19 10:30:00', 'inteira',  'debito',   '20000000007', '10000000008'),
+('ING000000000009', '2026-11-20 15:45:00', 'inteira',  'credito',  '20000000009', '10000000012'),
+('ING000000000010', '2026-11-21 09:05:00', 'gratuita', 'dinheiro', '20000000010', '10000000007'),
+('ING000000000011', '2026-11-22 12:00:00', 'inteira',  'dinheiro', '20000000001', '10000000008'),
+('ING000000000012', '2026-11-22 12:05:00', 'inteira',  'pix',      '20000000002', '10000000008'),
+('ING000000000013', '2026-11-23 10:10:00', 'meia',     'credito',  '20000000005', '10000000012'),
+('ING000000000014', '2026-11-25 11:30:00', 'inteira',  'debito',   '20000000003', '10000000007'),
+('ING000000000015', '2026-11-26 16:00:00', 'gratuita', 'dinheiro', '20000000006', '10000000012');
+
+insert into come (id_alimentacao, id_pet) values
+('Peixe fresco', 'AN0001'), ('Sardinha', 'AN0001'),
+('Peixe fresco', 'AN0002'), ('Sardinha', 'AN0002'),
+('Peixe fresco', 'AN0003'), ('Sardinha', 'AN0003'),
+('Peixe fresco', 'AN0004'), ('Sardinha', 'AN0004'),
+('Peixe fresco', 'AN0005'), ('Camarao', 'AN0005'),
+('Capim', 'AN0006'), ('Feno', 'AN0006'),
+('Folhas de acacia', 'AN0007'), ('Capim', 'AN0007'),
+('Capim', 'AN0008'), ('Hortalicas', 'AN0008'),
+('Carne bovina', 'AN0009'), ('Frango', 'AN0009'),
+('Frutas variadas', 'AN0010'), ('Sementes variadas', 'AN0010'),
+('Frutas variadas', 'AN0011'), ('Grilos', 'AN0011'),
+('Frutas variadas', 'AN0012'), ('Grilos', 'AN0012'),
+('Bambu', 'AN0013'), ('Hortalicas', 'AN0013'),
+('Carne bovina', 'AN0014'), ('Frango', 'AN0014'),
+('Grilos', 'AN0015'),
+('Frutas variadas', 'AN0016'), ('Sementes variadas', 'AN0016'),
+('Peixe fresco', 'AN0017'),
+('Ratos', 'AN0018'),
+('Bambu', 'AN0019'), ('Frutas variadas', 'AN0019'),
+('Hortalicas', 'AN0020'), ('Folhas de acacia', 'AN0020');
+
+insert into atende (id_func, id_pet) values
+('10000000001', 'AN0001'), ('10000000002', 'AN0001'),
+('10000000001', 'AN0002'),
+('10000000002', 'AN0003'),
+('10000000001', 'AN0004'),
+('10000000003', 'AN0005'),
+('10000000003', 'AN0006'), ('10000000002', 'AN0006'),
+('10000000003', 'AN0007'),
+('10000000003', 'AN0008'), ('10000000001', 'AN0008'),
+('10000000002', 'AN0009'),
+('10000000001', 'AN0010'),
+('10000000002', 'AN0011'),
+('10000000003', 'AN0012'),
+('10000000001', 'AN0013'),
+('10000000002', 'AN0014'), ('10000000003', 'AN0014'),
+('10000000003', 'AN0015'),
+('10000000001', 'AN0016'),
+('10000000002', 'AN0017'),
+('10000000003', 'AN0018'), ('10000000001', 'AN0018'),
+('10000000002', 'AN0019'),
+('10000000003', 'AN0020'), ('10000000001', 'AN0020');
