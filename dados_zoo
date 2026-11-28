@@ -211,3 +211,15 @@ insert into atende (id_func, id_pet) values
 ('10000000003', 'AN0018'), ('10000000001', 'AN0018'),
 ('10000000002', 'AN0019'),
 ('10000000003', 'AN0020'), ('10000000001', 'AN0020');
+
+insert into especie (nome_cientifico, nome_popular, reino, tipo_alimentacao) values
+('Cyanopsitta spixii', 'Ararinha-azul', 'Animalia', 'herbivoro');
+
+insert into viveiro(tipo_viveiro) values ('naturalista');
+
+insert into animal (id_pet, nome_animal, altura_cm, peso_kg, data_nasc, pais_origem, status_vida, sexo, id_especie, id_viveiro) values
+('AN0021', 'Hope', '18', '0.124', '2026-10-26', 'Brasil', 'vivo', 'F', 'Cyanopsitta spixii', 17);
+
+insert into atende (id_func, id_pet) values ('10000000002', 'AN0021');
+
+insert into come (id_alimentacao, id_pet) values ('Frutas variadas', 'AN0021'), ('Sementes variadas', 'AN0021');
