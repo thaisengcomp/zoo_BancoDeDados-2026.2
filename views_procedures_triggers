@@ -1,0 +1,16 @@
+use zoo;
+
+-- views dos atributos virtuais
+create view idade_animal as
+select animal.id_pet, animal.nome_animal,
+	timestampdiff(year, animal.data_nasc, curdate()) as anos,
+    timestampdiff(month, animal.data_nasc, curdate()) % 12 as meses
+from animal;
+
+create view idade_func as
+select funcionario.cpf_f, funcionario.nome,
+	timestampdiff(year, funcionario.data_nasc, curdate()) as anos,
+    timestampdiff(month, funcionario.data_nasc, curdate()) % 12 as meses
+from funcionario;
+
+-- procedures: dados de ingresso-visitante
