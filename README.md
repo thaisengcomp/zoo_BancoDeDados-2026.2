@@ -7,7 +7,10 @@ Desenvolvido por [Danilo Alves](https://github.com/alvesribeirodan) e [Thaís Ro
 2. [Modelo Entidade-Relacionamento](mer.md)
 3. [Modelo Relacional](mod_rel.md)
 4. Codigos SQL
+
    [Banco de dados](codigo_SQL)
+   
    [Dados](dados_zoo)
+   
    [Views, procedures e trigers](views_procedures_triggers)
    
